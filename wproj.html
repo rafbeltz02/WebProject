@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="wstyle.css">
+    <script src="wscript.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="#favorites" onclick="showSection('favorites')">Favorites</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="content-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="profile-pic">
+                <img src="images/prof1.jpg" alt="Profile Picture">
+            </div>
+            <div class="bio-info">
+                <p><strong>Name:</strong> Rafael Beltran</p>
+                <p><strong>Age:</strong> 22</p>
+                <p><strong>Address:</strong> Poblacion, Argao Cebu</p>
+                <p><strong>Hobbies:</strong> Anime, Online Games, Foods & Nature</p>
+                <p><strong>Tagline:</strong> "Animals are better than humans"</p>
+            </div>
+            <div class="strengths">
+                <h3>Strengths</h3>
+                <p>Creativity</p>
+                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                <p>Problem Solving</p>
+                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                <p>Calmness</p>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+        </div>
+   
+    
+    <div class="about-website">
+        <h2>About the Website</h2>
+        <p>This website serves as a personal portfolio, showcasing my skills, interests, and projects. It includes an interactive 'Brain Master Challenge' section with various problem-solving activities and a favorites section featuring an abstract art gallery.</p>
+		</div>
+    </section>
+
+    
+    <section id="portfolio" class="content-section" style="display: none;">
+        <h2>Brain Master Challenge</h2>
+        <button onclick="temperatureConverter()">Temperature Converter</button>
+        <button onclick="largeWord()">Find Largest Word</button>
+        <button onclick="leapYearCheck()">Check Leap Year</button>
+        <button onclick="basicOperations()">Basic Operations</button>
+        <button onclick="computeAcceleration()">Compute Acceleration</button>
+        <button onclick="closeWindow()">Close Window</button>
+    </section>
+    
+   <section id="favorites" class="content-section" style="display: none;">
+    <h2 id="gallery-header">Abstract Art Gallery</h2>
+    <div id="art-exhibit">
+	
+        <div id="artwork-1" class="artwork">
+		<div class="grey"><span class="boldy">IMAGE 1</span><br> KING BALDWIN IV</div>
+            <img src="images/king.jpg" alt="Art 1" class="art-image">
+			<div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+
+        
+        <div id="artwork-2" class="artwork">
+			 <div class="grey"><span class="boldy">IMAGE 2</span><br> SPIDER MAN MEME</div>
+            <img src="images/spider.jpg" alt="Art 2" class="art-image">
+			<div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+
+        <div id="artwork-3" class="artwork">
+			<div class="grey"><span class="boldy">IMAGE 3</span><br> GETO SUGURU</div>
+            <img src="images/getu.jpg" alt="Art 3" class="art-image">
+            <div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+
+        <div id="artwork-4" class="artwork">
+			 <div class="grey"><span class="boldy">IMAGE 4</span><br> 2B-PSEUDOCODE</div>
+            <img src="images/2b.jpg" alt="Art 4" class="art-image">
+            <div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+
+        <div id="artwork-5" class="artwork">
+			 <div class="grey"><span class="boldy">IMAGE 5</span><br> VIE COALESCE</div>
+            <img src="images/vie.jpg" alt="Art 5" class="art-image">
+            <div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+
+        <div id="artwork-6" class="artwork">
+			<div class="grey"><span class="boldy">IMAGE 6</span><br> CHAMBER(VALORANT)</div>
+            <img src="images/chamber.jpg" alt="Art 6" class="art-image">
+            <div class="heart1" onclick="toggleLike(this)"><img src="images/heart.png" class="tosmall"></div>
+            <div class="comments-section">
+                <ul class="comments-list"></ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <footer>
+        <p>&copy; 2025 My Personal Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
